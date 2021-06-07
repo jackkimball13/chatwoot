@@ -55,15 +55,16 @@ export const actions = {
       commit(types.SET_CAMPAIGN_UI_FLAG, { isUpdating: false });
     }
   },
-  async delete({ commit }, id) {
+
+  delete: async ({ commit }, id) => {
     commit(types.SET_CAMPAIGN_UI_FLAG, { isDeleting: true });
     try {
       await CampaignsAPI.delete(id);
       commit(types.DELETE_CAMPAIGN, id);
-      commit(types.SET_CAMPAIGN_UI_FLAG, { isDeleting: false });
     } catch (error) {
+      throw new Error(error);
+    } finally {
       commit(types.SET_CAMPAIGN_UI_FLAG, { isDeleting: false });
-      throw error;
     }
   },
 };
