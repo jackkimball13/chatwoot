@@ -48,6 +48,10 @@ export default {
       type: Function,
       default: () => {},
     },
+    onDeleteClick: {
+      type: Function,
+      default: () => {},
+    },
   },
 
   data() {
@@ -136,13 +140,20 @@ export default {
           renderBodyCell: row => (
             <div class="button-wrapper">
               <WootButton
-                variant="clear"
-                icon="ion-edit"
+                variant="link"
                 color-scheme="secondary"
-                classNames="grey-btn"
+                icon="ion-edit"
                 onClick={() => this.onEditClick(row)}
               >
                 {this.$t('CAMPAIGN.LIST.BUTTONS.EDIT')}
+              </WootButton>
+              <WootButton
+                variant="link"
+                icon="ion-close-circled"
+                color-scheme="secondary"
+                onClick={() => this.onDeleteClick(row)}
+              >
+                {this.$t('CAMPAIGN.LIST.BUTTONS.DELETE')}
               </WootButton>
             </div>
           ),

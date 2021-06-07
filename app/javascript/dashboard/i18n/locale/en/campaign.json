@@ -50,6 +50,19 @@
         "ERROR_MESSAGE": "There was an error, please try again"
       }
     },
+    "DELETE": {
+      "TITLE": "Delete campaign",
+      "CONFIRM": {
+        "TITLE": "Confirm Deletion",
+        "MESSAGE": "Are you sure to delete",
+        "YES": "Yes, Delete ",
+        "NO": "No, Keep "
+      },
+      "API": {
+        "SUCCESS_MESSAGE": "Campaign deleted successfully",
+        "ERROR_MESSAGE": "There was an error, please try again"
+      }
+    },
     "LIST": {
       "LOADING_MESSAGE": "Loading campaigns...",
       "404": "There are no campaigns created for this inbox.",
