@@ -44,14 +44,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    onEditClick: {
-      type: Function,
-      default: () => {},
-    },
-    onDeleteClick: {
-      type: Function,
-      default: () => {},
-    },
   },
 
   data() {
@@ -143,7 +135,7 @@ export default {
                 variant="link"
                 color-scheme="secondary"
                 icon="ion-edit"
-                onClick={() => this.onEditClick(row)}
+                onClick={() => this.$emit('on-edit-click', row)}
               >
                 {this.$t('CAMPAIGN.LIST.BUTTONS.EDIT')}
               </WootButton>
@@ -151,7 +143,7 @@ export default {
                 variant="link"
                 icon="ion-close-circled"
                 color-scheme="secondary"
-                onClick={() => this.onDeleteClick(row)}
+                onClick={() => this.$emit('on-delete-click', row)}
               >
                 {this.$t('CAMPAIGN.LIST.BUTTONS.DELETE')}
               </WootButton>

@@ -9,18 +9,18 @@
       :campaigns="records"
       :show-empty-result="showEmptyResult"
       :is-loading="uiFlags.isFetching"
-      :on-edit-click="openEditPopup"
-      :on-delete-click="openDeletePopup"
+      @on-edit-click="openEditPopup"
+      @on-delete-click="openDeletePopup"
     />
 
     <woot-modal :show.sync="showAddPopup" :on-close="hideAddPopup">
-      <add-campaign :on-close="hideAddPopup" :sender-list="selectedAgents" />
+      <add-campaign :sender-list="selectedAgents" @on-close="hideAddPopup" />
     </woot-modal>
-    <woot-modal :show.sync="showEditPopup" :on-close="hideEditPopup">
+    <woot-modal :show.sync="showEditPopup" @on-close="hideEditPopup">
       <edit-campaign
-        :on-close="hideEditPopup"
         :selected-campaign="selectedCampaign"
         :sender-list="selectedAgents"
+        @on-close="hideEditPopup"
       />
     </woot-modal>
     <woot-delete-modal
