@@ -109,7 +109,7 @@ export default {
         datasets: [
           {
             label: this.metrics[this.currentSelection].NAME,
-            backgroundColor: '#1f93ff',
+            backgroundColor: '#eb3081',
             data,
           },
         ],
