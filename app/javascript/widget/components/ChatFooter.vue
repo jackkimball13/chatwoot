@@ -58,6 +58,7 @@ export default {
   padding: $space-one;
   text-align: center;
   text-decoration: none;
+  visibility: none;
 
   img {
     margin-right: $space-small;
