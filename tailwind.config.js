@@ -12,6 +12,18 @@ module.exports = {
     colors: {
       white: colors.white,
       woot: {
+        50: '#fdfcfb',
+        100: '#fcefef',
+        200: '#f9c9e0',
+        300: '#f19bc1',
+        400: '#f06a9e',
+        500: '#eb3081',
+        600: '#d52e60',
+        700: '#b02345',
+        800: '#84192d',
+        900: '#531017',
+      },
+      oldwoot: {
         50: '#E3F2FF',
         100: '#BBDDFF',
         200: '#8FC9FF',
