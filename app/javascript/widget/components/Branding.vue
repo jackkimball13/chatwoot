@@ -57,6 +57,7 @@ export default {
   justify-content: center;
   padding: $space-normal 0 $space-slab;
   text-align: center;
+  visibility: none;
 
   img {
     margin-right: $space-smaller;
@@ -73,6 +74,7 @@ export default {
   font-size: $font-size-small;
   opacity: 0.9;
   text-decoration: none;
+  visibility: none;
 
   &:hover {
     filter: grayscale(0);
