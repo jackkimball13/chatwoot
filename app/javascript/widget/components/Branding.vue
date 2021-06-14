@@ -32,7 +32,7 @@ export default {
       globalConfig: 'globalConfig/get',
     }),
     brandRedirectURL() {
-      const baseURL = `${this.globalConfig.widgetBrandURL}?utm_source=widget_branding`;
+      const baseURL = `https://develomark.com/?utm_source=widget_branding`;
       if (this.referrerHost) {
         return `${baseURL}&utm_referrer=${this.referrerHost}`;
       }
